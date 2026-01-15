@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,90 +15,87 @@
   <body>
     <header class="header">
       <div class="container header-inner">
-        <div class="logo">Voiz</div>
+        <div class="logo-container">
+          <img src="./assets/logo3.svg" alt="Лого" />
+          <h2>ТИХОСТЬ 360</h2>
+        </div>
         <nav class="nav">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Contact</a>
+          <a href="#">Главная</a>
+          <a href="#">О студии</a>
+          <a href="#">Услуги</a>
+          <a href="#">Контакты</a>
         </nav>
       </div>
     </header>
 
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <span class="label">Recording your passion</span>
-          <h1>We are the best sound studio</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="hero-content container">
+        <span class="label">Записываем вашу страсть</span>
+        <h1>Мы — лучшая студия звукозаписи</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-          <div class="hero-actions">
-            <button class="btn-primary">Get Started</button>
-            <button class="btn-secondary">Watch Video</button>
-          </div>
-        </div>
-
-        <div class="hero-image">
-          <img src="assets/images/hero.jpg" alt="" />
+        <div class="hero-actions">
+          <button class="btn-primary">Оставить заявку</button>
+          <!-- <button class="btn-secondary">Смотреть видео</button> -->
         </div>
       </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="main">
       <div class="container services-inner">
         <div class="services-text">
-          <h2>Voices over studio for your projects</h2>
-          <p>It is easier to trust the work to the experts because they are able to provide the best results with reliable quality.</p>
+          <h2>Профессиональная озвучка для ваших проектов</h2>
+          <p>Проще доверить работу экспертам, потому что они способны обеспечить лучший результат и стабильное качество.</p>
 
           <div class="stats">
-            <div><strong>250+</strong><span>Project Completed</span></div>
-            <div><strong>72+</strong><span>Awards Winning</span></div>
-            <div><strong>538+</strong><span>Positive Reviews</span></div>
-            <div><strong>24+</strong><span>Years Experience</span></div>
+            <div><strong>250+</strong><span>Завершённых проектов</span></div>
+            <div><strong>72+</strong><span>Полученные награды</span></div>
+            <div><strong>538+</strong><span>Положительных отзывов</span></div>
+            <div><strong>24+</strong><span>Лет опыта</span></div>
           </div>
         </div>
 
         <div class="services-list">
-          <div class="service-item">Voice Over <span>117 Project</span></div>
-          <div class="service-item">Translation <span>84 Project</span></div>
-          <div class="service-item">Audio Maker <span>32 Project</span></div>
+          <div class="service-item">Озвучивание <span>117 проектов</span></div>
+          <div class="service-item">Перевод <span>84 проекта</span></div>
+          <div class="service-item">Аудиопродакшн <span>32 проекта</span></div>
         </div>
       </div>
     </section>
 
-    <section class="pricing">
+    <section class="pricing" id="price">
       <div class="container">
-        <h2>Choose Your Best Service Package</h2>
+        <h2>Выберите подходящий пакет услуг</h2>
 
         <div class="pricing-cards">
           <div class="card">
-            <h3>Basic Package</h3>
-            <div class="price">$42 / hour</div>
+            <h3>Базовый пакет</h3>
+            <div class="price">42 $ / час</div>
             <ul>
-              <li>Professional Recording</li>
-              <li>Creative Mixing</li>
-              <li>General Mastering</li>
+              <li>Профессиональная запись</li>
+              <li>Креативный миксинг</li>
+              <li>Финальный мастеринг</li>
             </ul>
-            <button class="btn-primary">Book Now</button>
+            <button class="btn-primary">Забронировать</button>
           </div>
 
           <div class="card">
-            <h3>Pro Package</h3>
-            <div class="price">$62 / hour</div>
+            <h3>Пакет Pro</h3>
+            <div class="price">62 $ / час</div>
             <ul>
-              <li>2 Bedrooms Cleaning</li>
-              <li>Steam Service</li>
-              <li>Window Cleaning</li>
+              <li>Запись в двух помещениях</li>
+              <li>Обработка и очистка звука</li>
+              <li>Сведение</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Premium Package</h3>
-            <div class="price">$99 / hour</div>
+            <h3>Премиум пакет</h3>
+            <div class="price">99 $ / час</div>
             <ul>
-              <li>2 Bedrooms Cleaning</li>
-              <li>Steam Service</li>
-              <li>Livingroom Cleaning</li>
+              <li>Полный продакшн</li>
+              <li>Расширенная обработка</li>
+              <li>Мастеринг высокого уровня</li>
             </ul>
           </div>
         </div>
@@ -109,26 +106,26 @@
       <div class="container footer-inner">
         <div class="footer-brand">
           <div class="logo">Voiz</div>
-          <p>It is easier to trust the work to the experts because they are able to provide quality.</p>
+          <p>Мы создаём качественный звук и помогаем реализовать самые смелые идеи.</p>
         </div>
 
         <div class="footer-col">
-          <h4>About</h4>
-          <a href="#">My History</a>
-          <a href="#">Blogs</a>
-          <a href="#">Pricing List</a>
+          <h4>О нас</h4>
+          <a href="#">История студии</a>
+          <a href="#">Блог</a>
+          <a href="#">Прайс-лист</a>
         </div>
 
         <div class="footer-col">
-          <h4>Information</h4>
-          <a href="#">Sitemap</a>
-          <a href="#">FAQ</a>
-          <a href="#">Contact Me</a>
+          <h4>Информация</h4>
+          <a href="#">Карта сайта</a>
+          <a href="#">Вопросы и ответы</a>
+          <a href="#">Связаться с нами</a>
         </div>
 
         <div class="footer-col">
-          <h4>Get In Touch</h4>
-          <button class="btn-primary">Contact Us</button>
+          <h4>Связаться</h4>
+          <button class="btn-primary">Написать нам</button>
         </div>
       </div>
     </footer>
