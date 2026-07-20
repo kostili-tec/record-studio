@@ -456,4 +456,32 @@ a {
   display: block;
   margin-bottom: 8px;
   opacity: 0.7;
+}
+
+.footer-fond {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  font-size: 12px;
+  color: #737373;
+  border: 1px solid #737373;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.fond-img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  max-width: 100%;
+  height: 40px;
+  width: 150px;
 }/*# sourceMappingURL=style.css.map */
