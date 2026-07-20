@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,29 +11,33 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <title>ТИХОСТЬ 360 - Студия звукозаписи</title>
+    <title>MSB-Records</title>
   </head>
   <body>
     <header class="header">
       <div class="container header-inner">
         <div class="logo-container">
-          <img src="./assets/logo3.svg" alt="Лого" />
-          <h2>ТИХОСТЬ 360</h2>
+          <img src="./assets/cat_logo.svg" alt="Лого" />
+          <h2>MSB-Records</h2>
         </div>
         <nav class="nav">
-          <a href="#">Главная</a>
-          <a href="#">О студии</a>
-          <a href="#">Услуги</a>
-          <a href="#">Контакты</a>
+          <a href="#main">Главная</a>
+          <a href="#why-us">Наши преимущества</a>
+          <!-- <a href="#">О студии</a> -->
+          <a href="#price">Услуги</a>
+          <a href="#footer">Контакты</a>
         </nav>
       </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="main">
       <div class="hero-content container">
         <span class="label">Записываем вашу страсть</span>
-        <h1>Мы — лучшая студия звукозаписи</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h1>
+          Создаем звук, <br />
+          который вдохновляет
+        </h1>
+        <p>Запись вокала, инструментов и подкастов, сведение и мастеринг на профессиональном оборудовании.</p>
 
         <div class="hero-actions">
           <button class="btn-primary">Оставить заявку</button>
@@ -42,79 +46,218 @@
       </div>
     </section>
 
-    <section class="services" id="main">
-      <div class="container services-inner">
-        <div class="services-text">
-          <h2>Профессиональная озвучка для ваших проектов</h2>
-          <p>Проще доверить работу экспертам, потому что они способны обеспечить лучший результат и стабильное качество.</p>
-
-          <div class="stats">
-            <div><strong>250+</strong><span>Завершённых проектов</span></div>
-            <div><strong>72+</strong><span>Полученные награды</span></div>
-            <div><strong>538+</strong><span>Положительных отзывов</span></div>
-            <div><strong>24+</strong><span>Лет опыта</span></div>
-          </div>
+    <section class="advantages" id="why-us">
+      <div class="advantages-container container">
+        <div class="section-header">
+          <!-- <h2 class="section-title">Почему выбирают нас</h2> -->
+          <h2 class="section-title">Студия звукозаписи в Нальчике</h2>
+          <p class="section-description">Мы создаем комфортные условия для творчества и помогаем добиться профессионального звучания каждой записи.</p>
         </div>
+        <div class="why-us__grid">
+          <article class="feature-card">
+            <div class="card-center">
+              <svg class="us-icon" width="24" height="24" viewBox="0 0 24 24">
+                <use href="./assets/svg-sprite.svg#icon-microphone-stage-bold"></use>
+              </svg>
 
-        <div class="services-list">
-          <div class="service-item">Озвучивание <span>117 проектов</span></div>
-          <div class="service-item">Перевод <span>84 проекта</span></div>
-          <div class="service-item">Аудиопродакшн <span>32 проекта</span></div>
+              <h3>Чистый профессиональный звук</h3>
+            </div>
+            <p>Современное оборудование и качественная обработка каждой записи.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="card-center">
+              <svg class="us-icon" width="24" height="24" viewBox="0 0 24 24">
+                <use href="./assets/svg-sprite.svg#icon-lightning-bold"></use>
+              </svg>
+              <h3>Быстрая обработка материала</h3>
+            </div>
+            <p>Соблюдаем сроки и оперативно подготавливаем готовый материал.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="card-center">
+              <svg class="us-icon" width="24" height="24" viewBox="0 0 24 24">
+                <use href="./assets/svg-sprite.svg#icon-waveform-bold"></use>
+              </svg>
+              <h3>Внимание к каждой детали</h3>
+            </div>
+            <p>Настраиваем звучание так, чтобы раскрыть потенциал каждого трека.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="card-center">
+              <svg class="us-icon" width="24" height="24" viewBox="0 0 24 24">
+                <use href="./assets/svg-sprite.svg#icon-handshake-bold"></use>
+              </svg>
+              <h3>Поддержка на всех этапах</h3>
+            </div>
+            <p>Помогаем от первой записи до финального мастеринга.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="pricing" id="price">
       <div class="container">
-        <h2>Выберите подходящий пакет услуг</h2>
+        <h2>Наши услуги</h2>
+        <div>
+          <h3>Студия</h3>
+          <div class="pricing-cards">
+            <div class="card">
+              <h3>Запись</h3>
+              <!-- <div class="price">₽1 500  / час</div> -->
+              <div class="card-price-title">
+                <span class="card-price">₽ 1 500</span>
+                <span class="card-hour">/ час</span>
+              </div>
+              <ul>
+                <li>Запись вокала, инструментов или подкастов в профессиональной студии</li>
+              </ul>
+              <!-- <button class="btn-primary">Забронировать</button> -->
+            </div>
 
-        <div class="pricing-cards">
-          <div class="card">
-            <h3>Базовый пакет</h3>
-            <div class="price">42 $ / час</div>
-            <ul>
-              <li>Профессиональная запись</li>
-              <li>Креативный миксинг</li>
-              <li>Финальный мастеринг</li>
-            </ul>
-            <button class="btn-primary">Забронировать</button>
+            <div class="card">
+              <h3>Аренда студи</h3>
+              <div class="card-price-title">
+                <span class="card-price">₽ 3 500</span>
+                <span class="card-hour">/ 4 часа</span>
+              </div>
+              <ul>
+                <li>Комфортное пространство для записи и репетиций</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Аренда оборудования</h3>
+              <div class="card-price-title">
+                <span class="card-price">по запросу</span>
+                <span class="card-hour"></span>
+              </div>
+              <ul>
+                <li>Профессиональные инструменты и аппаратура для записи и выступлений</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3>Продакшн</h3>
+          <div class="pricing-cards">
+            <div class="card card-prod">
+              <h3>Бит (минус) на заказ</h3>
+              <div class="card-price-title">
+                <span class="card-hour">от &nbsp;</span>
+                <span class="card-price">₽ 7000</span>
+              </div>
+              <ul>
+                <li>Создание уникального инструментала с учетом ваших пожеланий</li>
+              </ul>
+            </div>
+
+            <div class="card card-prod">
+              <h3>Сведение и мастеринг</h3>
+              <div class="card-price-title">
+                <span class="card-hour">от &nbsp;</span>
+                <span class="card-price">₽ 7000</span>
+              </div>
+              <ul>
+                <li>Финальная обработка трека для чистого и сбалансированного звучания.</li>
+              </ul>
+            </div>
+
+            <div class="card card-prod">
+              <h3>Трек под ключ</h3>
+              <div class="card-price-title">
+                <span class="card-hour">от &nbsp;</span>
+                <span class="card-price">₽ 30000</span>
+              </div>
+              <ul>
+                <li>Полный цикл создания композиции — от идеи до готового релиза.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3>Дополнительные услуги</h3>
+          <div class="pricing-cards">
+            <div class="card">
+              <h3>Дистрибуция треков</h3>
+              <div class="card-price-title">
+                <span class="card-hour">от &nbsp;</span>
+                <span class="card-price">₽ 2000</span>
+              </div>
+              <ul>
+                <li>Подготовка и публикация музыки на популярных стриминговых сервисах</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Песня по вашей истории</h3>
+              <div class="card-price-title">
+                <!-- <span class="card-hour">от &nbsp;</span> -->
+                <span class="card-price">₽ 6500</span>
+              </div>
+              <ul>
+                <li>Авторская песня, созданная по вашим воспоминаниям или событию</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Концертный звукорежиссер</h3>
+              <div class="card-price-title">
+                <span class="card-hour">от &nbsp;</span>
+                <span class="card-price">₽ 10000</span>
+              </div>
+              <ul>
+                <li>Настройка и сопровождение звука на концертах и мероприятиях</li>
+              </ul>
+            </div>
           </div>
 
-          <div class="card">
-            <h3>Пакет Pro</h3>
-            <div class="price">62 $ / час</div>
-            <ul>
-              <li>Запись в двух помещениях</li>
-              <li>Обработка и очистка звука</li>
-              <li>Сведение</li>
-            </ul>
-          </div>
+          <div class="pricing-cards pricing-cards-bottom">
+            <div class="card">
+              <h3>Музыкальная группа на мероприятие</h3>
+              <div class="card-price-title">
+                <!-- <span class="card-hour">от &nbsp;</span> -->
+                <span class="card-price">по запросу</span>
+              </div>
+              <ul>
+                <li>Живое музыкальное сопровождение для вашего мероприятия</li>
+              </ul>
+            </div>
 
-          <div class="card">
-            <h3>Премиум пакет</h3>
-            <div class="price">99 $ / час</div>
-            <ul>
-              <li>Полный продакшн</li>
-              <li>Расширенная обработка</li>
-              <li>Мастеринг высокого уровня</li>
-            </ul>
+            <div class="card">
+              <h3>Другие услуги</h3>
+              <div class="card-price-title">
+                <!-- <span class="card-hour">от &nbsp;</span> -->
+                <span class="card-price">по запросу</span>
+              </div>
+              <ul>
+                <li>Свяжитесь с нами — обсудим вашу задачу и предложим решение</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container footer-inner">
         <div class="footer-brand">
-          <div class="logo">Voiz</div>
+          <div class="logo">
+            <img src="./assets/cat_logo.svg" alt="MSB-Records" style="width: 5rem" />
+          </div>
           <p>Мы создаём качественный звук и помогаем реализовать самые смелые идеи.</p>
         </div>
 
         <div class="footer-col">
-          <h4>О нас</h4>
-          <a href="#">История студии</a>
-          <a href="#">Блог</a>
-          <a href="#">Прайс-лист</a>
+          <h4>Меню</h4>
+          <a href="#main">Главная</a>
+          <a href="#why-us">Наши преимущества</a>
+          <a href="#price">Услуги</a>
+          <a href="#footer">Контакты</a>
         </div>
 
         <div class="footer-col">

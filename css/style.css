@@ -111,6 +111,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -216,7 +220,7 @@ a {
   z-index: 1;
 }
 .hero-content h1 {
-  width: 50%;
+  width: 60%;
 }
 
 .label {
@@ -266,6 +270,66 @@ a {
   border-radius: 12px;
 }
 
+.advantages {
+  position: relative;
+  padding: 100px 0;
+}
+
+.why-us__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media (max-width: 1024px) {
+  .why-us__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .why-us__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.us-icon {
+  width: 32px;
+  height: 32px;
+  color: #e11d2e;
+}
+
+.section-header {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 48px;
+}
+
+.section-description {
+  color: #737373;
+}
+
+.why-us__grid {
+  margin-top: 3rem;
+}
+
+.feature-card p {
+  color: #737373;
+}
+
+.card-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .services {
   padding: 100px 0;
   position: relative;
@@ -303,7 +367,7 @@ a {
 }
 
 .pricing {
-  padding: 100px 0;
+  padding: 50px 0;
   background: radial-gradient(circle at top, #1a1a2e, #000);
 }
 
@@ -317,21 +381,60 @@ a {
   gap: 32px;
 }
 
+.pricing-cards-other {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 32px;
+}
+
+.pricing-cards-bottom {
+  width: calc(66.666% + 16px);
+  margin: 32px auto 0;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .card {
-  background: #0b0b0b;
+  background: #0c0c0c;
   padding: 32px;
   border-radius: 16px;
+}
+.card h3 {
+  font-size: 26px;
+}
+.card li::marker {
+  color: #e11d2e;
+  font-size: 1.5em;
+}
+.card ul {
+  padding-left: 20px;
+  opacity: 0.8;
+}
+
+.card-prod {
+  background: #1e1d1d;
 }
 
 .price {
   font-size: 32px;
   margin: 16px 0;
+  font-weight: 600;
   color: #e11d2e;
 }
 
-.card ul {
-  padding-left: 20px;
-  opacity: 0.8;
+.card-price-title {
+  color: #e11d2e;
+}
+
+.card-price {
+  font-size: 54px;
+  font-weight: 500;
+}
+
+.card-hour {
+  font-size: 20px;
+  color: #727272;
 }
 
 .footer {
