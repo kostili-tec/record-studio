@@ -2,11 +2,11 @@ const swiper = new Swiper(".pricing-slider", {
   loop: true,
   spaceBetween: 24,
 
-  /* autoplay: {
-    delay: 3000,
+  autoplay: {
+    delay: 5000,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
-  }, */
+  },
 
   pagination: {
     el: ".swiper-pagination",
