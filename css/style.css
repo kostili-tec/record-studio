@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -20,7 +21,7 @@ a {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -38,12 +39,18 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 600;
   font-size: 1rem;
   gap: 0.5rem;
 }
 .logo-container img {
   width: 50px;
+}
+.logo-container h2 {
+  margin: 0;
 }
 
 .header-inner {
@@ -70,15 +77,21 @@ a {
   color: #c90526;
 }
 
-.hero {
+.hero-bg {
   padding: 80px 0;
   height: 600px;
-  background-image: url("../assets/images/singer.jpg");
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.95)), color-stop(40%, rgba(0, 0, 0, 0.4)), color-stop(70%, transparent)), radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.7) 100%), url("../assets/images/singer.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 70%), radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.7) 100%), url("../assets/images/singer.jpg");
   background-position: right top;
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-color: #000;
+}
+
+.hero-bg-4k {
+  display: none;
 }
 
 .hero::before {
@@ -164,7 +177,7 @@ a {
 
 .advantages {
   position: relative;
-  padding: 100px 0;
+  padding: 40px 0 50px;
 }
 
 .why-us__grid {
@@ -263,6 +276,10 @@ a {
   background: radial-gradient(circle at top, #1a1a2e, #000);
 }
 
+.pricing-head {
+  font-size: 48px;
+}
+
 .personal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -272,6 +289,10 @@ a {
           justify-content: space-between;
   padding-bottom: 50px;
   margin-bottom: 70px;
+}
+
+.personal-head {
+  font-size: 48px;
 }
 
 .personal-card {
@@ -340,7 +361,8 @@ a {
           align-items: center;
   margin-bottom: 2rem;
 }
-.pricing-titles h2 {
+
+.pricing-head {
   font-size: 48px;
   margin: 0;
 }
@@ -489,6 +511,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   gap: 24px;
+  position: relative;
 }
 
 .pricing-slider {
@@ -518,6 +541,7 @@ a {
   height: 48px;
   border: none;
   border-radius: 50%;
+  position: absolute;
   cursor: pointer;
   -webkit-transition: background-color 0.25s ease, color 0.25s ease, -webkit-transform 0.25s ease;
   transition: background-color 0.25s ease, color 0.25s ease, -webkit-transform 0.25s ease;
@@ -529,10 +553,22 @@ a {
   color: #e11d2e;
 }
 
+.pricing-prev {
+  -webkit-transform: translate(-60px, -20px);
+      -ms-transform: translate(-60px, -20px);
+          transform: translate(-60px, -20px);
+}
 .pricing-prev svg {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.pricing-next {
+  right: 0;
+  -webkit-transform: translate(60px, -20px);
+      -ms-transform: translate(60px, -20px);
+          transform: translate(60px, -20px);
 }
 
 .swiper-pagination {
@@ -548,4 +584,131 @@ a {
 
 .swiper-pagination-bullet-active {
   background: #e11d2e !important;
+}
+
+/* 1. Большие экраны и стандартные ПК (Меньше 1400px) */
+@media (max-width: 1399.98px) {
+  /* Стили для ноутбуков и средних мониторов */
+  .container {
+    max-width: 1000px;
+  }
+  .section-title {
+    font-size: 40px;
+  }
+  .advantages {
+    padding: 0 0 40px;
+  }
+  .personal-head,
+  .pricing-head {
+    font-size: 40px;
+  }
+  .pricing-subtitles h3 {
+    font-size: 26px;
+  }
+  .pricing-subtitles h4 {
+    font-size: 14px;
+  }
+  .card {
+    min-height: 250px;
+  }
+  .card h3 {
+    font-size: 20px;
+  }
+  .card ul {
+    font-size: 14px;
+  }
+  .card-price {
+    font-size: 36px;
+  }
+  .personal-card-img {
+    max-width: 225px;
+    height: 338px;
+  }
+}
+/* 2. Ноутбуки и маленькие мониторы (Меньше 1200px) */
+@media (max-width: 1199.98px) {
+  /* Стили для экранов типа MacBook Air 13", старых мониторов */
+}
+/* 3. Планшеты в альбомной ориентации / Нетбуки (Меньше 992px) */
+@media (max-width: 991.98px) {
+  /* Здесь обычно перестраивают сложные сетки, прячут горизонтальное меню в бургер */
+}
+/* 4. Планшеты в портретной ориентации (Меньше 768px) */
+@media (max-width: 767.98px) {
+  /* Размеры экранов вроде iPad. Элементы интерфейса становятся крупнее для тач-скринов */
+}
+/* 5. Большие смартфоны в горизонтальном режиме (Меньше 576px) */
+@media (max-width: 575.98px) {
+  /* Стили для мобильных телефонов. Колонки окончательно встают друг под друга */
+}
+@media (min-width: 2000px) {
+  body {
+    font-size: 22px; /* Увеличиваем базовый шрифт, чтобы текст читался издалека */
+  }
+  .container {
+    max-width: 1800px; /* Ограничиваем максимальную ширину контента */
+  }
+  .logo-container img {
+    width: 100px;
+  }
+  .logo-container h2 {
+    font-size: 42px;
+  }
+  .nav a {
+    font-size: 22px;
+  }
+  .hero {
+    text-align: left;
+  }
+  .hero p {
+    max-width: 760px;
+  }
+  .hero-container {
+    position: relative;
+  }
+  .hero-bg {
+    background-image: none;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .hero-bg-4k {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 600px;
+    width: 1200px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.95)), color-stop(40%, rgba(0, 0, 0, 0.4)), color-stop(70%, transparent)), radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.7) 100%), url("../assets/images/hero_bg_synth.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 70%), radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.7) 100%), url("../assets/images/hero_bg_synth.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    -webkit-box-shadow: inset 0 0 50px 20px rgba(0, 0, 0, 0.7);
+            box-shadow: inset 0 0 50px 20px rgba(0, 0, 0, 0.7);
+  }
+  /*   .hero {
+    padding: 80px 0;
+    height: 600px;
+    background-image: radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%), url("../assets/images/hero_bg_synth.jpg");
+  } */
+  .label {
+    font-size: 16px;
+  }
+  .btn-primary {
+    font-size: 22px;
+  }
+  .personal-card img {
+    clip-path: none;
+  }
+  .personal-card-img {
+    max-width: 400px;
+    height: 600px;
+  }
+  .card-titles-name {
+    font-size: 22px;
+  }
+  .card-titles-spec {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=style.css.map */
