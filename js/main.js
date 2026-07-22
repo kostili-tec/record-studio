@@ -36,7 +36,7 @@ let dvdAnimation;
 function createDvdVideo() {
   const dvd = document.createElement("video");
 
-  dvd.src = "../assets/roll2.mp4";
+  dvd.src = "assets/roll2.mp4";
   dvd.autoplay = true;
   dvd.loop = true;
   dvd.muted = true;
@@ -88,7 +88,7 @@ const createRoll = () => {
 
   videoContainer.classList.add("roll-container");
 
-  video.src = "../assets/roll.mp4";
+  video.src = "assets/roll.mp4";
   video.autoplay = true;
   video.loop = true;
   video.controls = false;
