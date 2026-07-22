@@ -411,6 +411,29 @@ a {
   gap: 40px;
 }
 
+.footer-logo {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.footer-logo.click-animation {
+  animation: logoClick 150ms ease;
+}
+
+@keyframes logoClick {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.94);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .footer-col h4 {
   margin-bottom: 16px;
 }
@@ -511,6 +534,63 @@ a {
 
 .swiper-pagination-bullet-active {
   background: #e11d2e !important;
+}
+
+.roll-container {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 50vw;
+  height: 40vh;
+}
+
+.roll-player {
+  width: 100%;
+}
+
+.roll-close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid #fff;
+  padding-bottom: 2px;
+  border-radius: 50%;
+
+  font-size: 20px;
+  cursor: pointer;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: ease-in opacity 0.3s;
+  background: transparent;
+  color: #fff;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.roll-close.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.roll-dvd {
+  top: 0;
+  position: fixed;
+  width: 20vw;
+  pointer-events: none;
+  z-index: 10000;
 }
 
 /* 1. Большие экраны и стандартные ПК (Меньше 1400px) */
