@@ -607,7 +607,7 @@ a {
 
 .roll-container {
   position: fixed;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
@@ -758,6 +758,14 @@ a {
     padding: 40px 0;
     display: flex;
   }
+
+  .roll-container {
+    width: 80vw;
+  }
+
+  .roll-dvd {
+    width: 30vw;
+  }
 }
 
 /* 3. Планшеты в альбомной ориентации / Нетбуки (Меньше 992px) */
@@ -882,6 +890,10 @@ a {
 
   .footer-fond {
     flex: 1;
+  }
+
+  .roll-dvd {
+    width: 40vw;
   }
 }
 

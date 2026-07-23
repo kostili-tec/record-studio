@@ -701,7 +701,7 @@ a {
 
 .roll-container {
   position: fixed;
-  top: 40%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -836,6 +836,12 @@ a {
     display: -ms-flexbox;
     display: flex;
   }
+  .roll-container {
+    width: 80vw;
+  }
+  .roll-dvd {
+    width: 30vw;
+  }
 }
 /* 3. Планшеты в альбомной ориентации / Нетбуки (Меньше 992px) */
 @media (max-width: 991.98px) {
@@ -967,6 +973,9 @@ a {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+  .roll-dvd {
+    width: 40vw;
   }
 }
 /* 4. Планшеты в портретной ориентации (Меньше 768px) */
