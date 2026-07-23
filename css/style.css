@@ -119,9 +119,9 @@ a {
 }
 
 .burger.active span:nth-child(1) {
-  -webkit-transform: translateY(13px) rotate(45deg);
-      -ms-transform: translateY(13px) rotate(45deg);
-          transform: translateY(13px) rotate(45deg);
+  -webkit-transform: translateY(14px) rotate(45deg);
+      -ms-transform: translateY(14px) rotate(45deg);
+          transform: translateY(14px) rotate(45deg);
 }
 
 .burger.active span:nth-child(2) {
@@ -530,6 +530,7 @@ a {
 .footer-logo {
   display: inline-block;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .footer-logo.click-animation {
@@ -854,9 +855,9 @@ a {
     position: fixed;
     top: 0;
     right: 0;
-    -webkit-transform: translate(-40px, 40px);
-        -ms-transform: translate(-40px, 40px);
-            transform: translate(-40px, 40px);
+    -webkit-transform: translate(-40px, 35px);
+        -ms-transform: translate(-40px, 35px);
+            transform: translate(-40px, 35px);
   }
   .nav {
     position: fixed;
@@ -981,6 +982,23 @@ a {
 /* 4. Планшеты в портретной ориентации (Меньше 768px) */
 @media (max-width: 767.98px) {
   /* Размеры экранов вроде iPad. Элементы интерфейса становятся крупнее для тач-скринов */
+  .burger {
+    width: 30px;
+    height: 25px;
+    -webkit-transform: translate(-40px, 37px);
+        -ms-transform: translate(-40px, 37px);
+            transform: translate(-40px, 37px);
+  }
+  .burger.active span:nth-child(1) {
+    -webkit-transform: translateY(13px) rotate(45deg);
+        -ms-transform: translateY(13px) rotate(45deg);
+            transform: translateY(13px) rotate(45deg);
+  }
+  .burger.active span:nth-child(3) {
+    -webkit-transform: translateY(-9px) rotate(-45deg);
+        -ms-transform: translateY(-9px) rotate(-45deg);
+            transform: translateY(-9px) rotate(-45deg);
+  }
   .hero h1 {
     width: 80%;
   }
