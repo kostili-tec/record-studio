@@ -26,7 +26,7 @@ a {
 .header {
   padding: 24px 0;
   position: relative;
-  z-index: 1;
+  z-index: 2000;
 }
 
 .logo-container {
@@ -61,7 +61,62 @@ a {
   }
 }
 
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.3s;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.burger {
+  display: none;
+
+  width: 36px;
+  height: 30px;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  padding: 0;
+
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.burger span {
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+
+  transition: 0.3s;
+}
+
+.burger.active span:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
+
 .hero {
+  position: relative;
 }
 
 .hero-bg {
@@ -296,6 +351,13 @@ a {
   bottom: -23px;
 }
 
+.card-titles-bottom-1 {
+  bottom: -36px;
+}
+.card-titles-bottom-2 {
+  bottom: -18px;
+}
+
 .card-titles-name {
   color: #bb1e38;
   font-weight: 500;
@@ -454,13 +516,20 @@ a {
   border: 1px solid #737373;
   gap: 0.5rem;
   padding: 0.5rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.footer-fond-img {
+  flex-basis: 100%;
 }
 
 .fond-img {
-  flex: 0 0 auto;
-  max-width: 100%;
-  height: 40px;
-  width: 150px;
+  width: 100%;
+  height: auto;
+  max-width: 150px;
 }
 
 /* SWIPPER */
@@ -646,30 +715,274 @@ a {
 /* 2. Ноутбуки и маленькие мониторы (Меньше 1200px) */
 @media (max-width: 1199.98px) {
   /* Стили для экранов типа MacBook Air 13", старых мониторов */
+
+  .container {
+    max-width: 800px;
+  }
+
+  .hero {
+    h1 {
+      font-size: 44px;
+      width: 68%;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .hero-bg {
+    height: 400px;
+  }
+
+  .feature-card {
+    p {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+  .card-center {
+    text-align: center;
+  }
+
+  .personal-card-img {
+    width: 180px;
+    height: 270px;
+  }
+
+  .card-titles-spec {
+    font-size: 12px;
+  }
+
+  .footer {
+    padding: 40px 0;
+    display: flex;
+  }
 }
 
 /* 3. Планшеты в альбомной ориентации / Нетбуки (Меньше 992px) */
 @media (max-width: 991.98px) {
   /* Здесь обычно перестраивают сложные сетки, прячут горизонтальное меню в бургер */
+  .burger {
+    display: flex;
+    z-index: 1001;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate(-40px, 40px);
+  }
+
+  .nav {
+    position: fixed;
+
+    top: 0;
+    right: -100%;
+
+    width: 300px;
+    height: 100vh;
+
+    background: #111;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 32px;
+    padding-top: 8rem;
+
+    transition: right 0.3s ease;
+
+    z-index: 1000;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .header-inner {
+    justify-content: space-between;
+  }
+
+  .hero {
+    h1 {
+      width: 60%;
+      font-size: 40px;
+    }
+  }
+
+  .section-title,
+  .personal-head,
+  .pricing-head {
+    font-size: 36px;
+  }
+
+  .pricing-subtitles {
+    width: 36%;
+  }
+
+  .advantages {
+    padding-top: 20px;
+  }
+
+  .pricing {
+    padding-top: 1px;
+  }
+
+  .pricing-prev,
+  .pricing-next {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 813px) {
+  .container {
+    width: 100%;
+    padding: 0 25px;
+  }
+
+  .personal {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 25px;
+  }
+  .personal-card-img {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+  }
+  .personal-card-titles {
+    position: relative;
+  }
+  .card-titles-bottom-1,
+  .card-titles-bottom-2 {
+    bottom: 0;
+  }
+
+  .card-cut-66,
+  .card-cut-80,
+  .card-cut-50 {
+    clip-path: none;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer-brand {
+    display: flex;
+  }
+
+  .footer-logo-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-fond {
+    flex: 1;
+  }
 }
 
 /* 4. Планшеты в портретной ориентации (Меньше 768px) */
 @media (max-width: 767.98px) {
   /* Размеры экранов вроде iPad. Элементы интерфейса становятся крупнее для тач-скринов */
+  .hero h1 {
+    width: 80%;
+  }
+  .hero-container {
+    position: relative;
+  }
+
+  .hero-bg {
+    background-image: none;
+    flex: 1;
+  }
+
+  .hero-bg-4k {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 400px;
+    width: 100%;
+    background-image:
+      linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 70%), radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.7) 100%),
+      url("../assets/images/hero_bg_synth.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    box-shadow: inset 0 0 50px 20px rgba(0, 0, 0, 0.7);
+  }
+
+  .why-us__grid {
+    gap: 12px;
+  }
+
+  .feature-card h3 {
+    margin: 9px 0;
+  }
+
+  .feature-card p {
+    margin: 7px 0;
+  }
+
+  .footer {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 665px) {
+  .footer-brand {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .footer-inner {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 /* 5. Большие смартфоны в горизонтальном режиме (Меньше 576px) */
 @media (max-width: 575.98px) {
   /* Стили для мобильных телефонов. Колонки окончательно встают друг под друга */
+  .hero-bg {
+    height: 500px;
+    padding-bottom: 0;
+  }
+  .hero-bg-4k {
+    height: 500px;
+  }
+  .hero h1 {
+    margin: 2rem 0;
+    width: 100%;
+  }
+  .hero-actions {
+    margin-top: 5rem;
+  }
+  .advantages {
+    padding-top: 0;
+  }
+
+  .pricing-subtitles {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 528px) {
+  .hero-actions {
+    margin-top: 3rem;
+  }
 }
 
 @media (min-width: 2000px) {
   body {
-    font-size: 22px; /* Увеличиваем базовый шрифт, чтобы текст читался издалека */
+    font-size: 22px;
   }
 
   .container {
-    max-width: 1800px; /* Ограничиваем максимальную ширину контента */
+    max-width: 1800px;
   }
 
   .logo-container {
@@ -688,10 +1001,6 @@ a {
   }
 
   .hero {
-    // display: flex;
-    // justify-content: space-evenly;
-    // margin: 0 auto;
-    // position: relative;
     text-align: left;
     p {
       max-width: 760px;
@@ -700,10 +1009,6 @@ a {
 
   .hero-container {
     position: relative;
-  }
-
-  .hero-content {
-    // width: 50%;
   }
 
   .hero-bg {
@@ -726,12 +1031,6 @@ a {
     background-attachment: scroll;
     box-shadow: inset 0 0 50px 20px rgba(0, 0, 0, 0.7);
   }
-
-  /*   .hero {
-    padding: 80px 0;
-    height: 600px;
-    background-image: radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%), url("../assets/images/hero_bg_synth.jpg");
-  } */
 
   .label {
     font-size: 16px;

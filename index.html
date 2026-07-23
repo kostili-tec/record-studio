@@ -13,6 +13,7 @@
   </head>
   <body>
     <header class="header">
+      <div class="overlay"></div>
       <div class="container header-inner">
         <div class="logo-container">
           <img src="./assets/cat_logo.svg" alt="Лого" />
@@ -25,6 +26,11 @@
           <a href="#price">Услуги</a>
           <a href="#footer">Контакты</a>
         </nav>
+        <button class="burger" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 
@@ -74,7 +80,7 @@
               <svg class="us-icon" width="24" height="24" viewBox="0 0 24 24">
                 <use href="./assets/svg-sprite.svg#icon-lightning-bold"></use>
               </svg>
-              <h3 style="white-space: nowrap">Быстрая обработка материала</h3>
+              <h3>Быстрая обработка материала</h3>
             </div>
             <p>Соблюдаем сроки и оперативно подготавливаем готовый материал</p>
           </article>
@@ -108,7 +114,7 @@
         <div class="personal">
           <div class="personal-card">
             <img class="personal-card-img card-cut-66" src="./assets/images/photo_2026-07-21_13-42-59.jpg" alt="" />
-            <div class="personal-card-titles" style="bottom: -36px">
+            <div class="personal-card-titles card-titles-bottom-1">
               <span class="card-titles-name">Кирилл</span>
               <span class="card-titles-spec"
                 >Mix and mastering engineer,<br />
@@ -118,21 +124,21 @@
           </div>
           <div class="personal-card">
             <img class="personal-card-img card-cut-66" src="./assets/images/photo_2026-07-21_13-42-44.jpg" alt="" />
-            <div class="personal-card-titles" style="bottom: -36px">
+            <div class="personal-card-titles card-titles-bottom-1">
               <span class="card-titles-name">Руслан</span>
               <span class="card-titles-spec"> Музыкант мультиинструменталист, звукооператор</span>
             </div>
           </div>
           <div class="personal-card">
             <img class="personal-card-img card-cut-80" src="./assets/images/photo_2026-07-21_13-43-06.jpg" alt="" />
-            <div class="personal-card-titles" style="bottom: -18px">
+            <div class="personal-card-titles card-titles-bottom-2">
               <span class="card-titles-name">Ростислав</span>
               <span class="card-titles-spec">Вокалист, сонграйтер</span>
             </div>
           </div>
           <div class="personal-card">
             <img class="personal-card-img card-cut-50" src="./assets/images/photo_2026-07-21_13-43-14.jpg" alt="" />
-            <div class="personal-card-titles" style="bottom: -18px">
+            <div class="personal-card-titles card-titles-bottom-2">
               <span class="card-titles-name">Диана</span>
               <span class="card-titles-spec">Вокалистка, преподаватель вокала</span>
             </div>
@@ -307,10 +313,12 @@
     <footer class="footer" id="footer">
       <div class="container footer-inner">
         <div class="footer-brand">
-          <div class="logo footer-logo">
-            <img src="./assets/cat_logo.svg" alt="MSB-Records" style="width: 5rem" />
+          <div class="footer-logo-container">
+            <div class="logo footer-logo">
+              <img src="./assets/cat_logo.svg" alt="MSB-Records" style="width: 5rem" />
+            </div>
+            <p>Мы создаём качественный звук и помогаем реализовать самые смелые идеи.</p>
           </div>
-          <p>Мы создаём качественный звук и помогаем реализовать самые смелые идеи.</p>
 
           <div class="footer-fond">
             <div class="footer-fond-img">

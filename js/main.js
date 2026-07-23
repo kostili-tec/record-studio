@@ -1,3 +1,28 @@
+const burger = document.querySelector(".burger");
+const nav = document.querySelector(".nav");
+const overlay = document.querySelector(".overlay");
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  nav.classList.toggle("active");
+  overlay.classList.toggle("active");
+});
+
+
+// Закрытие меню после клика по ссылке
+nav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    burger.classList.remove("active");
+    nav.classList.remove("active");
+  });
+});
+
+overlay.addEventListener("click", () => {
+  burger.classList.remove("active");
+  nav.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
 const swiper = new Swiper(".pricing-slider", {
   loop: true,
   spaceBetween: 24,
