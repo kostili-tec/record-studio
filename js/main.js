@@ -8,7 +8,6 @@ burger.addEventListener("click", () => {
   overlay.classList.toggle("active");
 });
 
-
 // Закрытие меню после клика по ссылке
 nav.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
@@ -191,5 +190,61 @@ document.querySelector(".footer-logo").addEventListener("click", function (event
   if (clickCount === 5) {
     createRoll();
     clickCount = 0;
+  }
+});
+
+// Contacts Modal
+
+const contactsModal = document.querySelector("#contacts-modal");
+const contactsClose = contactsModal.querySelector(".contacts-modal__close");
+
+let lastFocusedElement = null;
+
+function openContactsModal() {
+  lastFocusedElement = document.activeElement;
+
+  contactsModal.classList.add("is-open");
+  contactsModal.setAttribute("aria-hidden", "false");
+
+  document.body.classList.add("modal-open");
+
+  contactsClose.focus();
+}
+
+function closeContactsModal() {
+  contactsModal.classList.remove("is-open");
+  contactsModal.setAttribute("aria-hidden", "true");
+
+  document.body.classList.remove("modal-open");
+
+  if (lastFocusedElement) {
+    lastFocusedElement.focus();
+  }
+}
+
+// Открытие по ссылкам
+document.addEventListener("click", (event) => {
+  const trigger = event.target.closest("[data-open-contacts]");
+
+  if (trigger) {
+    event.preventDefault();
+    openContactsModal();
+  }
+});
+
+// Закрытие по кнопке
+contactsClose.addEventListener("click", closeContactsModal);
+
+// Закрытие по клику вне окна
+contactsModal.addEventListener("click", (event) => {
+  if (event.target === contactsModal) {
+    closeContactsModal();
+  }
+});
+
+// Закрытие по Escape
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && contactsModal.classList.contains("is-open")) {
+    closeContactsModal();
   }
 });

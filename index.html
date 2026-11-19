@@ -9,14 +9,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
-    <title>MSB-Records</title>
+    <title>Студия звукозаписи MSB Records в Нальчике</title>
+    <meta name="description" content="MSB Records — студия звукозаписи в Нальчике. Запись вокала и инструментов, создание битов, сведение и мастеринг, создание песен под ключ." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://msbrecords.pro/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MSB Records — Студия звукозаписи в Нальчике" />
+    <meta property="og:description" content="Запись вокала и инструментов, создание музыки, сведение и мастеринг." />
+    <meta property="og:url" content="https://msbrecords.pro/" />
+    <meta property="og:image" content="https://msbrecords.pro/assets/images/og-image.jpg" />
+    <meta property="og:locale" content="ru_RU" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "MSB Records",
+        "description": "Студия звукозаписи в Нальчике. Запись вокала, создание музыки, сведение и мастеринг.",
+        "url": "https://msbrecords.pro/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Нальчик",
+          "addressRegion": "Кабардино-Балкарская Республика",
+          "addressCountry": "RU",
+          "streetAddress": "ул. Ахохова д. 92"
+        }
+      }
+    </script>
   </head>
   <body>
     <header class="header">
       <div class="overlay"></div>
       <div class="container header-inner">
         <div class="logo-container">
-          <img src="./assets/cat_logo.svg" alt="Лого" />
+          <img src="./assets/cat_logo.svg" alt="MSB Records" />
           <h2>MSB-Records</h2>
         </div>
         <nav class="nav">
@@ -24,7 +49,7 @@
           <a href="#why-us">Наши преимущества</a>
           <!-- <a href="#">О студии</a> -->
           <a href="#price">Услуги</a>
-          <a href="#footer">Контакты</a>
+          <a href="#contacts-modal" data-open-contacts>Контакты</a>
         </nav>
         <button class="burger" aria-label="Открыть меню">
           <span></span>
@@ -34,281 +59,280 @@
       </div>
     </header>
 
-    <section class="hero" id="main">
-      <div class="hero-container">
-        <div class="hero-bg">
-          <div class="hero-content container">
-            <span class="label">Записываем вашу страсть</span>
-            <h1>
-              Создаем звук, <br />
-              который вдохновляет
-            </h1>
-            <p>Запись вокала, инструментов и подкастов, сведение и мастеринг на профессиональном оборудовании.</p>
+    <main>
+      <section class="hero" id="main">
+        <div class="hero-container">
+          <div class="hero-bg">
+            <div class="hero-content container">
+              <span class="label">Записываем вашу страсть</span>
+              <h1>
+                Создаем звук, <br />
+                который вдохновляет
+              </h1>
+              <p>Запись вокала, инструментов и подкастов, сведение и мастеринг на профессиональном оборудовании.</p>
 
-            <div class="hero-actions">
-              <button class="btn-primary">Оставить заявку</button>
-              <!-- <button class="btn-secondary">Смотреть видео</button> -->
+              <div class="hero-actions">
+                <button class="btn-primary">Оставить заявку</button>
+                <!-- <button class="btn-secondary">Смотреть видео</button> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-bg-4k"></div>
+        </div>
+      </section>
+
+      <section class="advantages" id="why-us">
+        <div class="advantages-container container">
+          <div class="section-header">
+            <!-- <h2 class="section-title">Почему выбирают нас</h2> -->
+            <h2 class="section-title">Студия звукозаписи в Нальчике</h2>
+            <p class="section-description">Мы создаем комфортные условия для творчества и помогаем добиться профессионального звучания каждой записи</p>
+          </div>
+          <div class="why-us__grid">
+            <article class="feature-card">
+              <div class="card-center">
+                <svg class="us-icon" width="24" height="24" viewBox="0 0 24 24">
+                  <use href="./assets/svg-sprite.svg#icon-microphone-stage-bold"></use>
+                </svg>
+
+                <h3>Чистый профессиональный звук</h3>
+              </div>
+              <p>Современное оборудование и качественная обработка каждой записи</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="card-center">
+                <svg class="us-icon" width="24" height="24" viewBox="0 0 24 24">
+                  <use href="./assets/svg-sprite.svg#icon-lightning-bold"></use>
+                </svg>
+                <h3>Быстрая обработка материала</h3>
+              </div>
+              <p>Соблюдаем сроки и оперативно подготавливаем готовый материал</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="card-center">
+                <svg class="us-icon" width="24" height="24" viewBox="0 0 24 24">
+                  <use href="./assets/svg-sprite.svg#icon-waveform-bold"></use>
+                </svg>
+                <h3>Внимание к каждой детали</h3>
+              </div>
+              <p>Настраиваем звучание так, чтобы раскрыть потенциал каждого трека</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="card-center">
+                <svg class="us-icon" width="24" height="24" viewBox="0 0 24 24">
+                  <use href="./assets/svg-sprite.svg#icon-handshake-bold"></use>
+                </svg>
+                <h3>Поддержка на всех этапах</h3>
+              </div>
+              <p>Помогаем от первой записи до финального мастеринга</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing" id="price">
+        <div class="container">
+          <h2 class="personal-head">Люди, которые создают звук</h2>
+          <div class="personal">
+            <div class="personal-card">
+              <img class="personal-card-img card-cut-66" src="./assets/images/photo_2026-07-21_13-42-59.jpg" alt="Кирилл — звукорежиссер и музыкальный продюсер MSB Records" />
+              <div class="personal-card-titles card-titles-bottom-1">
+                <span class="card-titles-name">Кирилл</span>
+                <span class="card-titles-spec">Звукорежиссер, музыкальный продюсер </span>
+              </div>
+            </div>
+            <div class="personal-card">
+              <img class="personal-card-img card-cut-66" src="./assets/images/photo_2026-07-21_13-42-44.jpg" alt="Руслан - Музыкант мультиинструменталист, звукооператор" />
+              <div class="personal-card-titles card-titles-bottom-1">
+                <span class="card-titles-name">Руслан</span>
+                <span class="card-titles-spec"> Музыкант мультиинструменталист, звукооператор</span>
+              </div>
+            </div>
+            <div class="personal-card">
+              <img class="personal-card-img card-cut-80" src="./assets/images/photo_2026-07-21_13-43-06.jpg" alt="Ростислав - Вокалист, сонграйтер" />
+              <div class="personal-card-titles card-titles-bottom-2">
+                <span class="card-titles-name">Ростислав</span>
+                <span class="card-titles-spec">Вокалист, сонграйтер</span>
+              </div>
+            </div>
+            <div class="personal-card">
+              <img class="personal-card-img card-cut-50" src="./assets/images/photo_2026-07-21_13-43-14.jpg" alt="Диана - Вокалистка, преподаватель вокала" />
+              <div class="personal-card-titles card-titles-bottom-2">
+                <span class="card-titles-name">Диана</span>
+                <span class="card-titles-spec">Вокалистка, преподаватель вокала</span>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="hero-bg-4k"></div>
-      </div>
-    </section>
-
-    <section class="advantages" id="why-us">
-      <div class="advantages-container container">
-        <div class="section-header">
-          <!-- <h2 class="section-title">Почему выбирают нас</h2> -->
-          <h2 class="section-title">Студия звукозаписи в Нальчике</h2>
-          <p class="section-description">Мы создаем комфортные условия для творчества и помогаем добиться профессионального звучания каждой записи</p>
-        </div>
-        <div class="why-us__grid">
-          <article class="feature-card">
-            <div class="card-center">
-              <svg class="us-icon" width="24" height="24" viewBox="0 0 24 24">
-                <use href="./assets/svg-sprite.svg#icon-microphone-stage-bold"></use>
+        <div class="container">
+          <div class="pricing-titles">
+            <h2 class="pricing-head">Наши услуги</h2>
+            <div class="pricing-subtitles">
+              <h3>Полный цикл</h3>
+              <h4>Все необходимое для создания качественного музыкального продукта</h4>
+            </div>
+          </div>
+          <div class="slider-container">
+            <div class="pricing-prev">
+              <svg class="swiper-navigation-icon" width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.38296 20.0762C0.111788 19.805 0.111788 19.3654 0.38296 19.0942L9.19758 10.2796L0.38296 1.46497C0.111788 1.19379 0.111788 0.754138 0.38296 0.482966C0.654131 0.211794 1.09379 0.211794 1.36496 0.482966L10.4341 9.55214C10.8359 9.9539 10.8359 10.6053 10.4341 11.007L1.36496 20.0762C1.09379 20.3474 0.654131 20.3474 0.38296 20.0762Z"
+                  fill="currentColor"
+                ></path>
               </svg>
-
-              <h3>Чистый профессиональный звук</h3>
             </div>
-            <p>Современное оборудование и качественная обработка каждой записи</p>
-          </article>
 
-          <article class="feature-card">
-            <div class="card-center">
-              <svg class="us-icon" width="24" height="24" viewBox="0 0 24 24">
-                <use href="./assets/svg-sprite.svg#icon-lightning-bold"></use>
+            <div class="swiper pricing-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card">
+                    <h3>Запись</h3>
+                    <div class="card-price-title">
+                      <span class="card-price">₽ 1 500</span>
+                      <span class="card-hour">/ час</span>
+                    </div>
+                    <ul>
+                      <li>Запись вокала, инструментов или подкастов в профессиональной студии</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card card-prod">
+                    <h3>Бит (минус) на заказ</h3>
+                    <div class="card-price-title">
+                      <span class="card-hour">от &nbsp;</span>
+                      <span class="card-price">₽ 7000</span>
+                    </div>
+                    <ul>
+                      <li>Создание уникального инструментала с учетом ваших пожеланий</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card">
+                    <h3>Сведение и мастеринг</h3>
+                    <div class="card-price-title">
+                      <span class="card-hour">от &nbsp;</span>
+                      <span class="card-price">₽ 7000</span>
+                    </div>
+                    <ul>
+                      <li>Финальная обработка трека для чистого и сбалансированного звучания.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card card-prod">
+                    <h3>Трек под ключ</h3>
+                    <div class="card-price-title">
+                      <span class="card-hour">от &nbsp;</span>
+                      <span class="card-price">₽ 30000</span>
+                    </div>
+                    <ul>
+                      <li>Полный цикл создания композиции — от идеи до готового релиза.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card">
+                    <h3>Песня по вашей истории</h3>
+                    <div class="card-price-title">
+                      <!-- <span class="card-hour">от &nbsp;</span> -->
+                      <span class="card-price">₽ 6500</span>
+                    </div>
+                    <ul>
+                      <li>Авторская песня, созданная по вашим воспоминаниям или событию</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card card-prod">
+                    <h3>Концертный звукорежиссер</h3>
+                    <div class="card-price-title">
+                      <span class="card-hour">от &nbsp;</span>
+                      <span class="card-price">₽ 10000</span>
+                    </div>
+                    <ul>
+                      <li>Настройка и сопровождение звука на концертах и мероприятиях</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card">
+                    <h3>Аренда студи</h3>
+                    <div class="card-price-title">
+                      <span class="card-price">₽ 3 500</span>
+                      <span class="card-hour">/ 4 часа</span>
+                    </div>
+                    <ul>
+                      <li>Комфортное пространство для записи и репетиций</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card card-prod">
+                    <h3>Аренда оборудования</h3>
+                    <div class="card-price-title">
+                      <span class="card-price">по запросу</span>
+                      <span class="card-hour"></span>
+                    </div>
+                    <ul>
+                      <li>Профессиональные инструменты и аппаратура для записи и выступлений</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card">
+                    <h3 style="margin-bottom: -13px">Музыкальная группа на мероприятие</h3>
+                    <div class="card-price-title">
+                      <!-- <span class="card-hour">от &nbsp;</span> -->
+                      <span class="card-price">по запросу</span>
+                    </div>
+                    <ul>
+                      <li>Живое музыкальное сопровождение для вашего мероприятия</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card card-prod">
+                    <h3>Другие услуги</h3>
+                    <div class="card-price-title">
+                      <!-- <span class="card-hour">от &nbsp;</span> -->
+                      <span class="card-price">по запросу</span>
+                    </div>
+                    <ul>
+                      <li>Свяжитесь с нами — обсудим вашу задачу и предложим решение</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="pricing-next">
+              <svg class="swiper-navigation-icon" width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.38296 20.0762C0.111788 19.805 0.111788 19.3654 0.38296 19.0942L9.19758 10.2796L0.38296 1.46497C0.111788 1.19379 0.111788 0.754138 0.38296 0.482966C0.654131 0.211794 1.09379 0.211794 1.36496 0.482966L10.4341 9.55214C10.8359 9.9539 10.8359 10.6053 10.4341 11.007L1.36496 20.0762C1.09379 20.3474 0.654131 20.3474 0.38296 20.0762Z"
+                  fill="currentColor"
+                ></path>
               </svg>
-              <h3>Быстрая обработка материала</h3>
-            </div>
-            <p>Соблюдаем сроки и оперативно подготавливаем готовый материал</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="card-center">
-              <svg class="us-icon" width="24" height="24" viewBox="0 0 24 24">
-                <use href="./assets/svg-sprite.svg#icon-waveform-bold"></use>
-              </svg>
-              <h3>Внимание к каждой детали</h3>
-            </div>
-            <p>Настраиваем звучание так, чтобы раскрыть потенциал каждого трека</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="card-center">
-              <svg class="us-icon" width="24" height="24" viewBox="0 0 24 24">
-                <use href="./assets/svg-sprite.svg#icon-handshake-bold"></use>
-              </svg>
-              <h3>Поддержка на всех этапах</h3>
-            </div>
-            <p>Помогаем от первой записи до финального мастеринга</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="pricing" id="price">
-      <div class="container">
-        <h2 class="personal-head">Люди, которые создают звук</h2>
-        <div class="personal">
-          <div class="personal-card">
-            <img class="personal-card-img card-cut-66" src="./assets/images/photo_2026-07-21_13-42-59.jpg" alt="" />
-            <div class="personal-card-titles card-titles-bottom-1">
-              <span class="card-titles-name">Кирилл</span>
-              <span class="card-titles-spec"
-                >Mix and mastering engineer,<br />
-                sound producer</span
-              >
-            </div>
-          </div>
-          <div class="personal-card">
-            <img class="personal-card-img card-cut-66" src="./assets/images/photo_2026-07-21_13-42-44.jpg" alt="" />
-            <div class="personal-card-titles card-titles-bottom-1">
-              <span class="card-titles-name">Руслан</span>
-              <span class="card-titles-spec"> Музыкант мультиинструменталист, звукооператор</span>
-            </div>
-          </div>
-          <div class="personal-card">
-            <img class="personal-card-img card-cut-80" src="./assets/images/photo_2026-07-21_13-43-06.jpg" alt="" />
-            <div class="personal-card-titles card-titles-bottom-2">
-              <span class="card-titles-name">Ростислав</span>
-              <span class="card-titles-spec">Вокалист, сонграйтер</span>
-            </div>
-          </div>
-          <div class="personal-card">
-            <img class="personal-card-img card-cut-50" src="./assets/images/photo_2026-07-21_13-43-14.jpg" alt="" />
-            <div class="personal-card-titles card-titles-bottom-2">
-              <span class="card-titles-name">Диана</span>
-              <span class="card-titles-spec">Вокалистка, преподаватель вокала</span>
             </div>
           </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="pricing-titles">
-          <h2 class="pricing-head">Наши услуги</h2>
-          <div class="pricing-subtitles">
-            <h3>Полный цикл</h3>
-            <h4>Все необходимое для создания качественного музыкального продукта</h4>
-          </div>
-        </div>
-        <div class="slider-container">
-          <div class="pricing-prev">
-            <svg class="swiper-navigation-icon" width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M0.38296 20.0762C0.111788 19.805 0.111788 19.3654 0.38296 19.0942L9.19758 10.2796L0.38296 1.46497C0.111788 1.19379 0.111788 0.754138 0.38296 0.482966C0.654131 0.211794 1.09379 0.211794 1.36496 0.482966L10.4341 9.55214C10.8359 9.9539 10.8359 10.6053 10.4341 11.007L1.36496 20.0762C1.09379 20.3474 0.654131 20.3474 0.38296 20.0762Z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </div>
-
-          <div class="swiper pricing-slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="card">
-                  <h3>Запись</h3>
-                  <div class="card-price-title">
-                    <span class="card-price">₽ 1 500</span>
-                    <span class="card-hour">/ час</span>
-                  </div>
-                  <ul>
-                    <li>Запись вокала, инструментов или подкастов в профессиональной студии</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card card-prod">
-                  <h3>Бит (минус) на заказ</h3>
-                  <div class="card-price-title">
-                    <span class="card-hour">от &nbsp;</span>
-                    <span class="card-price">₽ 7000</span>
-                  </div>
-                  <ul>
-                    <li>Создание уникального инструментала с учетом ваших пожеланий</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <h3>Сведение и мастеринг</h3>
-                  <div class="card-price-title">
-                    <span class="card-hour">от &nbsp;</span>
-                    <span class="card-price">₽ 7000</span>
-                  </div>
-                  <ul>
-                    <li>Финальная обработка трека для чистого и сбалансированного звучания.</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card card-prod">
-                  <h3>Трек под ключ</h3>
-                  <div class="card-price-title">
-                    <span class="card-hour">от &nbsp;</span>
-                    <span class="card-price">₽ 30000</span>
-                  </div>
-                  <ul>
-                    <li>Полный цикл создания композиции — от идеи до готового релиза.</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <h3>Песня по вашей истории</h3>
-                  <div class="card-price-title">
-                    <!-- <span class="card-hour">от &nbsp;</span> -->
-                    <span class="card-price">₽ 6500</span>
-                  </div>
-                  <ul>
-                    <li>Авторская песня, созданная по вашим воспоминаниям или событию</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card card-prod">
-                  <h3>Концертный звукорежиссер</h3>
-                  <div class="card-price-title">
-                    <span class="card-hour">от &nbsp;</span>
-                    <span class="card-price">₽ 10000</span>
-                  </div>
-                  <ul>
-                    <li>Настройка и сопровождение звука на концертах и мероприятиях</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <h3>Аренда студи</h3>
-                  <div class="card-price-title">
-                    <span class="card-price">₽ 3 500</span>
-                    <span class="card-hour">/ 4 часа</span>
-                  </div>
-                  <ul>
-                    <li>Комфортное пространство для записи и репетиций</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card card-prod">
-                  <h3>Аренда оборудования</h3>
-                  <div class="card-price-title">
-                    <span class="card-price">по запросу</span>
-                    <span class="card-hour"></span>
-                  </div>
-                  <ul>
-                    <li>Профессиональные инструменты и аппаратура для записи и выступлений</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <h3 style="margin-bottom: -13px">Музыкальная группа на мероприятие</h3>
-                  <div class="card-price-title">
-                    <!-- <span class="card-hour">от &nbsp;</span> -->
-                    <span class="card-price">по запросу</span>
-                  </div>
-                  <ul>
-                    <li>Живое музыкальное сопровождение для вашего мероприятия</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card card-prod">
-                  <h3>Другие услуги</h3>
-                  <div class="card-price-title">
-                    <!-- <span class="card-hour">от &nbsp;</span> -->
-                    <span class="card-price">по запросу</span>
-                  </div>
-                  <ul>
-                    <li>Свяжитесь с нами — обсудим вашу задачу и предложим решение</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-pagination"></div>
-          </div>
-          <div class="pricing-next">
-            <svg class="swiper-navigation-icon" width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M0.38296 20.0762C0.111788 19.805 0.111788 19.3654 0.38296 19.0942L9.19758 10.2796L0.38296 1.46497C0.111788 1.19379 0.111788 0.754138 0.38296 0.482966C0.654131 0.211794 1.09379 0.211794 1.36496 0.482966L10.4341 9.55214C10.8359 9.9539 10.8359 10.6053 10.4341 11.007L1.36496 20.0762C1.09379 20.3474 0.654131 20.3474 0.38296 20.0762Z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer class="footer" id="footer">
       <div class="container footer-inner">
@@ -333,25 +357,45 @@
           <a href="#main">Главная</a>
           <a href="#why-us">Наши преимущества</a>
           <a href="#price">Услуги</a>
-          <a href="#footer">Контакты</a>
+          <a href="#contacts-modal" data-open-contacts>Контакты</a>
         </div>
 
         <div class="footer-col">
-          <!--  <h4>Юридическое</h4>
-          <a href="#">Реквизиты</a>
-          <a href="#">Политика обработки данных</a>
-          <a href="#">Связаться с нами</a> -->
-          <p>ИП Билли Херрингтон</p>
-          <p>ИНН: 540863786669</p>
-          <p>ОГРНИП: 326505786012350</p>
+          <p>ООО "НЕЙРОСТУДИЯ ИИ"</p>
+          <p>ИНН: 0700028682</p>
+          <p>ОГРН: 1250700007250</p>
+          <p>Юридический адрес: 360024, КБР, Г. НАЛЬЧИК, УЛ. ТЕМРЮКА ИДАРОВА, Д. 56В, КВ. 31</p>
         </div>
 
         <div class="footer-col">
           <h4>Связаться</h4>
-          <button class="btn-primary">Написать нам</button>
+          <button class="btn-primary" data-open-contacts>Написать нам</button>
         </div>
       </div>
     </footer>
+    <!-- Contacts Modal -->
+    <div class="contacts-modal" id="contacts-modal" aria-hidden="true">
+      <div class="contacts-modal__content" role="dialog" aria-modal="true" aria-labelledby="contacts-modal-title">
+        <button class="contacts-modal__close" aria-label="Закрыть окно" type="button">&times;</button>
+
+        <h2 id="contacts-modal-title">Наши контакты</h2>
+
+        <div class="contacts-modal__section">
+          <h3>Адрес студии</h3>
+          <a href="https://yandex.ru/maps/-/CXWZb8oY" class="map-link">г. Нальчик, ул. Ахохова, д. 92</a>
+        </div>
+
+        <div class="contacts-modal__section">
+          <h3>Связаться с нами</h3>
+
+          <div class="contacts-modal__links">
+            <a href="https://t.me/doctor_msb" target="_blank" rel="noopener noreferrer">Прием заявок</a>
+
+            <a href="https://t.me/MSBRECORDS" target="_blank" rel="noopener noreferrer">Телеграм канал</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
